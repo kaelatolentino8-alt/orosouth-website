@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orosouth Realty Corporation | Titled Lots & Geodetic Services</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            990: '#020f0a',
+                            950: '#031710',
+                            900: '#072419',
+                            850: '#0b3223',
+                            800: '#10422f',
+                            700: '#16573f',
+                            600: '#1e7555',
+                        },
+                        gold: {
+                            100: '#FFFDF0',
+                            200: '#FDF3C7',
+                            300: '#F5E6AD',
+                            400: '#E6CA65',
+                            500: '#D4AF37',
+                            600: '#B58F24',
+                            700: '#8C6C16',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #031710;
+            color: #f8fafc;
+        }
+
+        /* Subtle Metallic Gold Text Gradient */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FFFDF0 0%, #F5E6AD 40%, #D4AF37 80%, #B58F24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Executive Gold Button Background */
+        .gold-btn {
+            background: linear-gradient(135deg, #F5E6AD 0%, #D4AF37 60%, #B58F24 100%);
+            color: #031710;
+            font-weight: 800;
+            transition: all 0.3s ease;
+        }
+
+        .gold-btn:hover {
+            background: linear-gradient(135deg, #FFFDF0 0%, #E6CA65 60%, #D4AF37 100%);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.35);
+            transform: translateY(-2px);
+        }
+
+        /* Glass Surface Cards */
+        .glass-panel {
+            background: rgba(7, 36, 25, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+        }
+
+        .glass-panel-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-panel-hover:hover {
+            border-color: rgba(230, 202, 101, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 20px -5px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #020f0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #10422f;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d4af37;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-brand-950">
+
+    <!-- Top Corporate Utility Bar -->
+    <div class="bg-brand-990 border-b border-gold-500/20 text-xs py-2 hidden md:block">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-slate-300">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-gold-400"></i>
+                    <span>Unit 2-K LIC Bldg., 1080 Dona Aurora Blvd., Lucena City</span>
+                </span>
+                <span class="flex items-center gap-2">
+                    <i class="fa-solid fa-clock text-gold-400"></i>
+                    <span>Mon - Sat: 8:00 AM - 5:00 PM</span>
+                </span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="tel:09456192329" class="hover:text-gold-300 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-gold-400"></i> (042) 788 0306 / 0945 619 2329
+                </a>
+                <a href="mailto:rtolentinofiles07@gmail.com" class="hover:text-gold-300 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-envelope text-gold-400"></i> rtolentinofiles07@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Sticky Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brand-950/95 backdrop-blur-md border-b border-gold-500/30 shadow-xl transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Corporate Logo SVG (Crisp & High-Definition Vector Layout) -->
+                <a href="#home" class="flex items-center gap-3 py-1 group">
+                    <div class="w-56 sm:w-64 h-12 flex items-center">
+                        <svg viewBox="0 0 270 65" class="w-full h-auto filter drop-shadow" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="headerGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFFDF0" />
+                                    <stop offset="35%" stop-color="#F5E6AD" />
+                                    <stop offset="70%" stop-color="#D4AF37" />
+                                    <stop offset="100%" stop-color="#8C6C16" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Clear Metallic Brand Typography -->
+                            <text x="0" y="36" font-family="'Cinzel', serif" font-weight="800" font-size="28" fill="url(#headerGoldGrad)" letter-spacing="2">OROSOUTH</text>
+                            <text x="1" y="53" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" fill="#F5E6AD" letter-spacing="3.5">REALTY CORPORATION</text>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase font-bold tracking-wider text-slate-200">
+                    <a href="#home" class="hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-400">Home</a>
+                    <a href="#properties" class="hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-400">Titled Lots</a>
+                    <a href="#estimator" class="hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-400">Investment Estimator</a>
+                    <a href="#services" class="hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-400">Geodetic Services</a>
+                    <a href="#faq" class="hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-400">FAQ</a>
+                    <a href="#contact" class="hover:text-gold-400 transition-colors py-2 border-b-2 border-transparent hover:border-gold-400">Contact Us</a>
+                </nav>
+
+                <!-- Navigation CTA Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="#contact" class="gold-btn px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider shadow-md">
+                        <i class="fa-regular fa-calendar-check mr-1.5"></i> Schedule Viewing
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gold-400 hover:text-white p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-900 border-b border-gold-500/30 px-6 pt-4 pb-6 space-y-3 shadow-2xl">
+            <a href="#home" class="mobile-link block py-2 text-white hover:text-gold-300 border-b border-brand-800 font-bold text-sm">Home</a>
+            <a href="#properties" class="mobile-link block py-2 text-white hover:text-gold-300 border-b border-brand-800 font-bold text-sm">Titled Lots</a>
+            <a href="#estimator" class="mobile-link block py-2 text-white hover:text-gold-300 border-b border-brand-800 font-bold text-sm">Investment Estimator</a>
+            <a href="#services" class="mobile-link block py-2 text-white hover:text-gold-300 border-b border-brand-800 font-bold text-sm">Geodetic Services</a>
+            <a href="#faq" class="mobile-link block py-2 text-white hover:text-gold-300 border-b border-brand-800 font-bold text-sm">FAQ</a>
+            <a href="#contact" class="mobile-link block py-2 text-white hover:text-gold-300 font-bold text-sm">Contact Us</a>
+            <a href="#contact" class="mobile-link block text-center gold-btn py-3 rounded-lg uppercase text-xs tracking-wider shadow-md mt-2">
+                Schedule Site Viewing
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-[90vh] flex items-center justify-center py-24 overflow-hidden bg-gradient-to-b from-brand-990 via-brand-950 to-brand-900 border-b border-gold-500/20">
+        <!-- Subtle Land Estate Background Graphic -->
+        <div class="absolute inset-0 z-0 opacity-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000'); filter: grayscale(20%) brightness(0.6);"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/80 to-brand-990/90 z-0"></div>
+
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            
+            <!-- Corporate Slogan Badge -->
+            <div class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full glass-panel border border-gold-400/40 mb-8 shadow-xl">
+                <i class="fa-solid fa-shield-halved text-gold-400 text-xs sm:text-sm"></i>
+                <span class="text-xs sm:text-sm font-bold tracking-widest text-gold-300 uppercase">Building Trust, Creating Communities</span>
+            </div>
+
+            <!-- Primary Headline -->
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight mb-6 drop-shadow-md">
+                INVEST TODAY, <br class="hidden sm:inline"/>
+                <span class="gold-gradient-text">BUILD TOMORROW.</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="max-w-3xl mx-auto text-base sm:text-xl text-gold-200 font-semibold mb-4 leading-relaxed">
+                Your Premier Partner for Registered Land Investments and Certified Geodetic Survey Solutions.
+            </p>
+            <p class="max-w-2xl mx-auto text-xs sm:text-sm text-slate-300 leading-relaxed font-medium mb-10 bg-brand-900/80 p-4 rounded-xl border border-brand-700/50 shadow-lg">
+                Explore titled residential & commercial properties across Quezon Province backed by licensed geodetic verification, full legal documentation, and transparent payment plans.
+            </p>
+
+            <!-- CTA Action Group -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#properties" class="w-full sm:w-auto gold-btn px-8 py-4 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-xl">
+                    <i class="fa-solid fa-compass text-sm"></i>
+                    <span>Explore Available Properties</span>
+                </a>
+                <a href="#services" class="w-full sm:w-auto glass-panel hover:bg-brand-800 text-gold-300 hover:text-white border border-gold-400/50 font-bold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2.5 text-xs uppercase tracking-wider shadow-lg">
+                    <i class="fa-solid fa-layer-group text-sm"></i>
+                    <span>Geodetic Land Services</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Property Directory Section -->
+    <section id="properties" class="py-20 bg-brand-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold tracking-widest text-gold-400 uppercase block mb-1">Featured Real Estate Portfolio</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white mb-3">Titled Lot Opportunities</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-300 text-xs sm:text-sm font-medium">Select prime lot locations in Quezon Province ideal for immediate residential building, commercial venture, or long-term land banking.</p>
+            </div>
+
+            <!-- Filter Toolbar Panel -->
+            <div class="glass-panel p-5 sm:p-6 rounded-2xl mb-10 border border-gold-500/30 shadow-xl">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    
+                    <div>
+                        <label class="block text-[11px] font-bold text-gold-300 mb-1.5 uppercase tracking-wider">Search Keyword</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gold-400 text-xs"></i>
+                            <input type="text" id="filter-search" placeholder="Search Brgy., Town, or Feature..." class="w-full bg-brand-990 border border-brand-700 rounded-lg pl-9 pr-3 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition placeholder-slate-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold text-gold-300 mb-1.5 uppercase tracking-wider">Municipality / Location</label>
+                        <select id="filter-location" class="w-full bg-brand-990 border border-brand-700 rounded-lg px-3 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition">
+                            <option value="all">All Locations (Quezon Province)</option>
+                            <option value="Lucban">Lucban, Quezon</option>
+                            <option value="San Francisco">San Francisco, Quezon</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold text-gold-300 mb-1.5 uppercase tracking-wider">Price ceiling / SQ.M.</label>
+                        <select id="filter-price" class="w-full bg-brand-990 border border-brand-700 rounded-lg px-3 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition">
+                            <option value="all">All Price Ranges</option>
+                            <option value="1000">₱1,000 / sqm or below</option>
+                            <option value="3000">₱3,000 / sqm or below</option>
+                            <option value="10000">Up to ₱10,000 / sqm</option>
+                        </select>
+                    </div>
+
+                    <div class="flex items-end">
+                        <button id="reset-filters" class="w-full glass-panel hover:bg-brand-800 text-gold-300 font-bold py-2.5 rounded-lg text-xs transition border border-gold-400/40 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-rotate-right"></i> Reset Directory
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Lots Directory Grid -->
+            <div id="lots-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Lot Card 1 -->
+                <div class="lot-card glass-panel glass-panel-hover rounded-2xl overflow-hidden flex flex-col border border-gold-500/30" data-location="Lucban" data-price="10000" data-name="Brgy. Samil, Lucban, Quezon">
+                    <div class="relative h-48 bg-brand-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800" alt="Brgy Samil Lucban" class="w-full h-full object-cover transition duration-500 transform hover:scale-105">
+                        <div class="absolute top-3 left-3 bg-brand-950/90 text-gold-300 border border-gold-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide">
+                            Prime Highway Frontage
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded text-[10px] font-bold">
+                            Titled Property
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold-400 text-xs font-bold mb-1">
+                                <i class="fa-solid fa-location-dot"></i> Lucban, Quezon
+                            </div>
+                            <h3 class="font-serif text-lg font-bold text-white mb-2">Brgy. Samil</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4 font-normal">Highly strategic land parcel suitable for commercial development or premium residential estates.</p>
+                            
+                            <div class="space-y-1.5 border-t border-brand-800 pt-3 text-[11px] text-slate-300 mb-4">
+                                <div class="flex justify-between"><span>Zoning:</span><span class="font-bold text-white">Commercial / Residential</span></div>
+                                <div class="flex justify-between"><span>Road Access:</span><span class="font-bold text-white">Concrete Main Road</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border-t border-brand-800 pt-3 mb-4 flex justify-between items-baseline">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase">Price / SQ.M</span>
+                                <span class="text-xl font-black text-gold-300 font-serif">₱10,000</span>
+                            </div>
+                            <button onclick="selectLotForCalc('Brgy. Samil, Lucban, Quezon', 10000)" class="w-full gold-btn py-2.5 rounded-lg text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calculator"></i> Calculate Investment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lot Card 2 -->
+                <div class="lot-card glass-panel glass-panel-hover rounded-2xl overflow-hidden flex flex-col border border-gold-500/30" data-location="San Francisco" data-price="500" data-name="Brgy. Sto. Niño, San Francisco, Quezon">
+                    <div class="relative h-48 bg-brand-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?q=80&w=800" alt="Brgy Sto Nino San Francisco" class="w-full h-full object-cover transition duration-500 transform hover:scale-105">
+                        <div class="absolute top-3 left-3 bg-brand-950/90 text-gold-300 border border-gold-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide">
+                            Best Value Land
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded text-[10px] font-bold">
+                            Titled Property
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold-400 text-xs font-bold mb-1">
+                                <i class="fa-solid fa-location-dot"></i> San Francisco, Quezon
+                            </div>
+                            <h3 class="font-serif text-lg font-bold text-white mb-2">Brgy. Sto. Niño</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4 font-normal">Expansive agricultural & farm lot opportunities ideal for estate farming or long-term land banking.</p>
+                            
+                            <div class="space-y-1.5 border-t border-brand-800 pt-3 text-[11px] text-slate-300 mb-4">
+                                <div class="flex justify-between"><span>Zoning:</span><span class="font-bold text-white">Agricultural / Agri-Estate</span></div>
+                                <div class="flex justify-between"><span>Road Access:</span><span class="font-bold text-white">Barangay Access Road</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border-t border-brand-800 pt-3 mb-4 flex justify-between items-baseline">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase">Price / SQ.M</span>
+                                <span class="text-xl font-black text-gold-300 font-serif">₱500</span>
+                            </div>
+                            <button onclick="selectLotForCalc('Brgy. Sto. Niño, San Francisco, Quezon', 500)" class="w-full gold-btn py-2.5 rounded-lg text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calculator"></i> Calculate Investment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lot Card 3 -->
+                <div class="lot-card glass-panel glass-panel-hover rounded-2xl overflow-hidden flex flex-col border border-gold-500/30" data-location="Lucban" data-price="2000" data-name="Brgy. Tiawe, Lucban, Quezon">
+                    <div class="relative h-48 bg-brand-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=800" alt="Brgy Tiawe Lucban" class="w-full h-full object-cover transition duration-500 transform hover:scale-105">
+                        <div class="absolute top-3 left-3 bg-brand-950/90 text-gold-300 border border-gold-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide">
+                            High Residential Demand
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded text-[10px] font-bold">
+                            Titled Property
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold-400 text-xs font-bold mb-1">
+                                <i class="fa-solid fa-location-dot"></i> Lucban, Quezon
+                            </div>
+                            <h3 class="font-serif text-lg font-bold text-white mb-2">Brgy. Tiawe</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4 font-normal">Cool mountain breeze location suitable for vacation rest houses, residential homes, and retirement plots.</p>
+                            
+                            <div class="space-y-1.5 border-t border-brand-800 pt-3 text-[11px] text-slate-300 mb-4">
+                                <div class="flex justify-between"><span>Zoning:</span><span class="font-bold text-white">Residential Community</span></div>
+                                <div class="flex justify-between"><span>Road Access:</span><span class="font-bold text-white">Subdivision Concrete Road</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border-t border-brand-800 pt-3 mb-4 flex justify-between items-baseline">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase">Price / SQ.M</span>
+                                <span class="text-xl font-black text-gold-300 font-serif">₱2,000</span>
+                            </div>
+                            <button onclick="selectLotForCalc('Brgy. Tiawe, Lucban, Quezon', 2000)" class="w-full gold-btn py-2.5 rounded-lg text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calculator"></i> Calculate Investment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lot Card 4 -->
+                <div class="lot-card glass-panel glass-panel-hover rounded-2xl overflow-hidden flex flex-col border border-gold-500/30" data-location="Lucban" data-price="2000" data-name="Brgy. Nalunao, Lucban, Quezon">
+                    <div class="relative h-48 bg-brand-900 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=800" alt="Brgy Nalunao Lucban" class="w-full h-full object-cover transition duration-500 transform hover:scale-105">
+                        <div class="absolute top-3 left-3 bg-brand-950/90 text-gold-300 border border-gold-400/40 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wide">
+                            Near Town Proper
+                        </div>
+                        <div class="absolute bottom-3 right-3 bg-emerald-950/90 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded text-[10px] font-bold">
+                            Titled Property
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-1 text-gold-400 text-xs font-bold mb-1">
+                                <i class="fa-solid fa-location-dot"></i> Lucban, Quezon
+                            </div>
+                            <h3 class="font-serif text-lg font-bold text-white mb-2">Brgy. Nalunao</h3>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-4 font-normal">Conveniently positioned near the Lucban Welcome Arch with excellent road network access.</p>
+                            
+                            <div class="space-y-1.5 border-t border-brand-800 pt-3 text-[11px] text-slate-300 mb-4">
+                                <div class="flex justify-between"><span>Zoning:</span><span class="font-bold text-white">Residential / Multi-Use</span></div>
+                                <div class="flex justify-between"><span>Road Access:</span><span class="font-bold text-white">Paved Provincial Road</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="border-t border-brand-800 pt-3 mb-4 flex justify-between items-baseline">
+                                <span class="text-[10px] font-bold text-slate-400 uppercase">Price / SQ.M</span>
+                                <span class="text-xl font-black text-gold-300 font-serif">₱2,000</span>
+                            </div>
+                            <button onclick="selectLotForCalc('Brgy. Nalunao, Lucban, Quezon', 2000)" class="w-full gold-btn py-2.5 rounded-lg text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-calculator"></i> Calculate Investment
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="no-results" class="hidden text-center py-12">
+                <i class="fa-solid fa-folder-open text-4xl text-gold-400 mb-3 block"></i>
+                <p class="text-slate-300 font-bold text-sm">No properties found matching your selected search filter.</p>
+                <button onclick="document.getElementById('reset-filters').click()" class="mt-2 text-gold-400 underline text-xs font-bold">Clear filters and view all lots</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Price & Amortization Calculator -->
+    <section id="estimator" class="py-20 bg-brand-900/60 relative border-t border-gold-500/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-gold-500/40 shadow-2xl">
+                
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-xs font-bold text-gold-400 tracking-widest uppercase block mb-1">Instant Investment Breakdown</span>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Property Price & Payment Estimator</h2>
+                    <p class="text-xs text-slate-300 font-medium">Customize lot size, down payment schedule, and term length to preview total cost and monthly installment values.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    
+                    <!-- Controls -->
+                    <div class="lg:col-span-6 space-y-5">
+                        
+                        <div>
+                            <label class="block text-xs font-bold text-gold-300 mb-2 uppercase tracking-wider">1. Select Target Property Location</label>
+                            <select id="calc-property" class="w-full bg-brand-990 border border-gold-400/40 rounded-xl px-4 py-3 text-xs text-white font-bold focus:outline-none focus:border-gold-300 transition">
+                                <option value="10000" data-name="Brgy. Samil, Lucban, Quezon">Brgy. Samil, Lucban (₱10,000 / sq.m)</option>
+                                <option value="500" data-name="Brgy. Sto. Niño, San Francisco, Quezon">Brgy. Sto. Niño, San Francisco (₱500 / sq.m)</option>
+                                <option value="2000" data-name="Brgy. Tiawe, Lucban, Quezon">Brgy. Tiawe, Lucban (₱2,000 / sq.m)</option>
+                                <option value="2000" data-name="Brgy. Nalunao, Lucban, Quezon">Brgy. Nalunao, Lucban (₱2,000 / sq.m)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold text-gold-300 uppercase tracking-wider">2. Target Lot Area (SQ.M.)</label>
+                                <span class="text-xs font-black text-gold-400 bg-brand-950 px-2.5 py-0.5 rounded border border-gold-500/30" id="area-val-badge">150 SQM</span>
+                            </div>
+                            <input type="number" id="calc-area" value="150" min="10" max="10000" step="10" class="w-full bg-brand-990 border border-gold-400/40 rounded-xl px-4 py-3 text-white font-extrabold text-lg focus:outline-none focus:border-gold-300 transition">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gold-300 mb-2 uppercase tracking-wider">3. Down Payment Schedule</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button" onclick="setDownPayment(20)" class="dp-btn bg-brand-800 border border-gold-400 text-xs py-2.5 rounded-lg text-white font-bold transition" data-dp="20">20% DP</button>
+                                <button type="button" onclick="setDownPayment(30)" class="dp-btn bg-brand-990 border border-brand-700 text-xs py-2.5 rounded-lg text-white font-medium transition" data-dp="30">30% DP</button>
+                                <button type="button" onclick="setDownPayment(50)" class="dp-btn bg-brand-990 border border-brand-700 text-xs py-2.5 rounded-lg text-white font-medium transition" data-dp="50">50% Spot</button>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gold-300 mb-2 uppercase tracking-wider">4. Remaining Balance Payment Term</label>
+                            <select id="calc-term" class="w-full bg-brand-990 border border-gold-400/40 rounded-xl px-4 py-3 text-xs text-white font-bold focus:outline-none focus:border-gold-300 transition">
+                                <option value="12">12 Months (1 Year)</option>
+                                <option value="24" selected>24 Months (2 Years)</option>
+                                <option value="36">36 Months (3 Years)</option>
+                                <option value="48">48 Months (4 Years)</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <!-- Live Breakdown Summary Card -->
+                    <div class="lg:col-span-6 bg-brand-990 border border-gold-400/60 rounded-2xl p-6 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                        
+                        <div>
+                            <div class="flex items-center justify-between border-b border-brand-800 pb-3 mb-4">
+                                <span class="text-xs uppercase text-slate-400 tracking-wider font-bold">Estimate Calculation</span>
+                                <span class="text-[10px] bg-gold-500/20 text-gold-300 border border-gold-400/40 px-2 py-0.5 rounded font-extrabold uppercase">Titled Property</span>
+                            </div>
+
+                            <span class="text-xs font-bold text-slate-300 uppercase">Total Property Price</span>
+                            <div class="text-3xl sm:text-4xl font-black text-gold-300 font-serif my-1" id="calc-total-price">₱1,500,000</div>
+                            <p class="text-xs text-slate-400 font-medium mb-6" id="calc-summary-text">For 150 SQ.M at Brgy. Samil, Lucban</p>
+
+                            <div class="space-y-3 text-xs border-t border-brand-800 pt-4">
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Rate per sq.m:</span>
+                                    <span class="font-bold text-white" id="calc-rate">₱10,000</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Down Payment (<span id="dp-percent-display">20</span>%):</span>
+                                    <span class="font-bold text-gold-300" id="calc-dp-amount">₱300,000</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300">
+                                    <span>Remaining Balance:</span>
+                                    <span class="font-bold text-white" id="calc-balance">₱1,200,000</span>
+                                </div>
+                                <div class="flex justify-between text-slate-300 pt-2 border-t border-brand-800/60">
+                                    <span class="font-bold text-gold-300">Est. Monthly Payment (<span id="term-months-display">24</span> mos):</span>
+                                    <span class="font-black text-gold-300 text-sm" id="calc-monthly">₱50,000 / mo</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="transferToInquiryForm()" class="w-full mt-6 gold-btn py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg">
+                            <span>Inquire With Calculation Details</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Geodetic & Land Services Section -->
+    <section id="services" class="py-20 bg-brand-950 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-bold tracking-widest text-gold-400 uppercase block mb-1">Professional Land Engineering Solutions</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-white mb-3">Geodetic & Land Titling Services</h2>
+                <div class="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-300 text-xs sm:text-sm font-medium">Delivering accurate boundary measurements, DENR/LRA documentation, and certified geodetic engineering expertise.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Service Card 1 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Land Titling</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Complete assistance for Transfer Certificate of Title (TCT), judicial titling, and Registry of Deeds processing.</p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-folder-open"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Land Documentation</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Expert drafting of Legal Instruments, Extrajudicial Settlements, Deed of Absolute Sale, and BIR Tax Clearances.</p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Relocation Survey</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Re-establishing exact missing boundary monuments (mojones) using high-precision GNSS/GPS equipment.</p>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Verification Survey</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Resolving land overlap disputes, encroachment issues, and title boundary verifications before purchase.</p>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Original Survey</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Initial land boundary surveying for alienable and disposable public land claims and DENR approvals.</p>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-diagram-project"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Subdivision Survey</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Partitioning mother titles into separate individual lot titles for family partitions or commercial selling.</p>
+                </div>
+
+                <!-- Service Card 7 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-mountain-sun"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Topographic Survey</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Detailed elevation mapping, contour plotting, and terrain analysis for architectural & civil site development.</p>
+                </div>
+
+                <!-- Service Card 8 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">CAD Mapping & Plotting</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Digital AutoCAD technical description plotting, blueprint drafting, and geospatial map layout creation.</p>
+                </div>
+
+                <!-- Service Card 9 -->
+                <div class="glass-panel glass-panel-hover p-6 rounded-2xl border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500 text-brand-950 flex items-center justify-center text-xl font-black mb-4 shadow-md">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-white mb-2">Location Plan / Site Maps</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-normal">Certified site plans required for municipal building permits, bank loan applications, and power grid connections.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4-Step Process Section -->
+    <section class="py-16 bg-brand-900/40 border-t border-gold-500/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-gold-400 uppercase tracking-widest block mb-1">Seamless Client Journey</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white">Our 4-Step Land Process</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="glass-panel p-5 rounded-xl border border-gold-500/20 text-center relative">
+                    <div class="w-8 h-8 rounded-full bg-gold-500 text-brand-950 font-black text-xs mx-auto mb-3 flex items-center justify-center">01</div>
+                    <h4 class="font-bold text-white text-sm mb-1">Consultation</h4>
+                    <p class="text-slate-300 text-xs">Discuss property preferences, title records, or required geodetic survey scope.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border border-gold-500/20 text-center relative">
+                    <div class="w-8 h-8 rounded-full bg-gold-500 text-brand-950 font-black text-xs mx-auto mb-3 flex items-center justify-center">02</div>
+                    <h4 class="font-bold text-white text-sm mb-1">Site Inspection</h4>
+                    <p class="text-slate-300 text-xs">Guided property site visit or physical land survey conducted by licensed engineers.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border border-gold-500/20 text-center relative">
+                    <div class="w-8 h-8 rounded-full bg-gold-500 text-brand-950 font-black text-xs mx-auto mb-3 flex items-center justify-center">03</div>
+                    <h4 class="font-bold text-white text-sm mb-1">Documentation</h4>
+                    <p class="text-slate-300 text-xs">Preparation of legal instruments, DENR survey plans, or title transfer records.</p>
+                </div>
+                <div class="glass-panel p-5 rounded-xl border border-gold-500/20 text-center relative">
+                    <div class="w-8 h-8 rounded-full bg-gold-500 text-brand-950 font-black text-xs mx-auto mb-3 flex items-center justify-center">04</div>
+                    <h4 class="font-bold text-white text-sm mb-1">Turnover</h4>
+                    <p class="text-slate-300 text-xs">Official handover of clean registered land titles or certified geodetic blueprint plans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-brand-950 border-t border-gold-500/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-gold-400 uppercase tracking-widest block mb-1">Clear & Transparent Answers</span>
+                <h2 class="font-serif text-3xl font-bold text-white mb-2">Frequently Asked Questions</h2>
+                <div class="w-16 h-1 bg-gold-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="space-y-4">
+                
+                <div class="glass-panel rounded-xl overflow-hidden border border-gold-500/20">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-sm text-white flex justify-between items-center focus:outline-none">
+                        <span>Are all lot properties offered by Orosouth clean and titled?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 text-xs text-slate-300 leading-relaxed hidden">
+                        Yes. All property listings distributed by Orosouth Realty Corporation are thoroughly verified with clean Transfer Certificates of Title (TCT) or Original Certificates of Title (OCT) free of encumbrances.
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-xl overflow-hidden border border-gold-500/20">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-sm text-white flex justify-between items-center focus:outline-none">
+                        <span>What payment options and installment terms are available?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 text-xs text-slate-300 leading-relaxed hidden">
+                        We offer flexible payment schemes including 20%, 30%, or 50% down payment with remaining balances payable in monthly installments over 12, 24, 36, or 48 months. Discounted terms are also available for spot cash payments.
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-xl overflow-hidden border border-gold-500/20">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-sm text-white flex justify-between items-center focus:outline-none">
+                        <span>How can I schedule a physical site viewing of a lot?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 text-xs text-slate-300 leading-relaxed hidden">
+                        You can easily schedule a viewing by filling out our Customer Information Sheet below or calling our office directly at <strong>(042) 788 0306</strong> or <strong>0945 619 2329</strong>. Our site officers assist viewings Monday through Saturday.
+                    </div>
+                </div>
+
+                <div class="glass-panel rounded-xl overflow-hidden border border-gold-500/20">
+                    <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-sm text-white flex justify-between items-center focus:outline-none">
+                        <span>Who performs the relocation and land subdivision surveys?</span>
+                        <i class="fa-solid fa-chevron-down text-gold-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-content px-6 pb-4 text-xs text-slate-300 leading-relaxed hidden">
+                        All survey work is directly executed and certified by PRC-Licensed Geodetic Engineers in compliance with DENR (Department of Environment and Natural Resources) and LRA standards.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Customer Information Sheet Section -->
+    <section id="contact" class="py-20 bg-brand-900/50 relative border-t border-gold-500/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Corporate Contact Info Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-gold-400 uppercase">Headquarters & Inquiries</span>
+                        <h2 class="font-serif text-3xl font-extrabold text-white mt-1 mb-3">Connect With Us</h2>
+                        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed font-medium">
+                            Visit our office in Lucena City or complete the Information Sheet to request lot reservations, site viewings, or geodetic survey quotes.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- HQ Address -->
+                        <div class="glass-panel p-4 rounded-xl border border-gold-500/20 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500 text-brand-950 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gold-300 uppercase tracking-wider">Office Address</h4>
+                                <p class="text-xs text-white mt-1 font-medium leading-relaxed">
+                                    Unit 2-K Broad Concept Landholdings Inc. (LIC Building), 1080 Dona Aurora Blvd., Lucena City, Quezon 4301
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone Lines -->
+                        <div class="glass-panel p-4 rounded-xl border border-gold-500/20 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500 text-brand-950 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gold-300 uppercase tracking-wider">Contact Hotlines</h4>
+                                <div class="text-xs text-white mt-1 space-y-0.5 font-medium">
+                                    <p>Telephone: (042) 788 0306</p>
+                                    <p>Mobile: 0945 619 2329 / 0917 182 7089</p>
+                                    <p>Mobile: 0933 817 7109 / 0917 167 2656</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="glass-panel p-4 rounded-xl border border-gold-500/20 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500 text-brand-950 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gold-300 uppercase tracking-wider">Email Address</h4>
+                                <a href="mailto:rtolentinofiles07@gmail.com" class="text-xs text-white hover:text-gold-300 transition mt-1 block font-bold underline">
+                                    rtolentinofiles07@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Facebook Page -->
+                        <div class="glass-panel p-4 rounded-xl border border-gold-500/20 flex items-start gap-3.5">
+                            <div class="w-10 h-10 rounded-lg bg-gold-500 text-brand-950 flex items-center justify-center font-bold shrink-0 mt-0.5">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-gold-300 uppercase tracking-wider">Official Social Media</h4>
+                                <a href="https://www.facebook.com/profile.php?id=61560875317688" target="_blank" rel="noopener noreferrer" class="text-xs text-white hover:text-gold-300 transition mt-1 inline-flex items-center gap-1.5 font-bold underline">
+                                    <span>Orosouth Realty Corporation Facebook Page</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gold-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column -->
+                <div class="lg:col-span-7">
+                    <div class="glass-panel p-6 sm:p-8 rounded-3xl border border-gold-500/40 shadow-2xl">
+                        <div class="mb-6">
+                            <h3 class="font-serif text-2xl font-bold text-white">Customer Information Sheet</h3>
+                            <p class="text-xs text-slate-300 font-medium mt-1">Please fill in your contact information below. Our corporate representative will contact you within 24 hours.</p>
+                        </div>
+
+                        <form id="info-sheet-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Full Name *</label>
+                                    <input type="text" required placeholder="e.g. Juan De La Cruz" class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition placeholder-slate-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Mobile Phone Number *</label>
+                                    <input type="tel" required placeholder="09XX XXX XXXX" class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition placeholder-slate-500">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Email Address *</label>
+                                    <input type="email" required placeholder="name@example.com" class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition placeholder-slate-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Preferred Interest</label>
+                                    <select id="form-interest" class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition">
+                                        <option value="Brgy. Samil, Lucban">Brgy. Samil, Lucban (₱10,000/sqm)</option>
+                                        <option value="Brgy. Sto. Niño, San Francisco">Brgy. Sto. Niño, San Francisco (₱500/sqm)</option>
+                                        <option value="Brgy. Tiawe, Lucban">Brgy. Tiawe, Lucban (₱2,000/sqm)</option>
+                                        <option value="Brgy. Nalunao, Lucban">Brgy. Nalunao, Lucban (₱2,000/sqm)</option>
+                                        <option value="Land Titling / Documentation">Land Titling & Documentation</option>
+                                        <option value="Geodetic Survey Services">Geodetic Survey Services</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Target Lot Size (SQ.M.)</label>
+                                    <input type="number" id="form-lotsize" placeholder="e.g. 150" class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition placeholder-slate-500">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Preferred Request</label>
+                                    <select class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition">
+                                        <option value="Schedule Site Viewing">Schedule Physical Site Viewing</option>
+                                        <option value="Request Official Price Quote">Request Price Quotation</option>
+                                        <option value="Survey Consultation">Request Geodetic Survey Consultation</option>
+                                        <option value="General Information">General Property Inquiry</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gold-300 uppercase mb-1">Notes / Specific Requirements</label>
+                                <textarea rows="3" placeholder="Specify any questions, preferred viewing dates, or lot location details..." class="w-full bg-brand-990 border border-brand-700 rounded-xl px-4 py-2.5 text-xs text-white font-semibold focus:outline-none focus:border-gold-400 transition resize-none placeholder-slate-500"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-btn py-3.5 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl mt-2">
+                                <i class="fa-solid fa-paper-plane text-xs"></i>
+                                <span>Submit Information Sheet</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+        <div class="glass-panel max-w-md w-full rounded-2xl p-8 border border-gold-400 text-center relative shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-gold-500 text-brand-950 flex items-center justify-center text-2xl mx-auto mb-4 shadow-lg">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-2">Information Received</h3>
+            <p class="text-xs text-slate-300 mb-6 leading-relaxed">
+                Thank you for inquiring with <strong class="text-gold-300">Orosouth Realty Corporation</strong>. Our representative will contact you shortly regarding your request.
+            </p>
+            <button onclick="closeModal()" class="w-full gold-btn py-3 rounded-xl text-xs uppercase tracking-wider shadow-lg">
+                Return to Website
+            </button>
+        </div>
+    </div>
+
+    <!-- Corporate Footer -->
+    <footer class="bg-brand-990 border-t border-gold-500/30 py-10 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <div class="md:col-span-2">
+                    <div class="w-56 mb-3">
+                        <svg viewBox="0 0 270 65" class="w-full h-auto" xmlns="http://www.w3.org/2000/svg">
+                            <text x="0" y="36" font-family="'Cinzel', serif" font-weight="800" font-size="28" fill="url(#headerGoldGrad)" letter-spacing="2">OROSOUTH</text>
+                            <text x="1" y="53" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="9" fill="#F5E6AD" letter-spacing="3.5">REALTY CORPORATION</text>
+                        </svg>
+                    </div>
+                    <p class="text-slate-300 max-w-sm mb-2 leading-relaxed font-normal">
+                        Building Trust, Creating Communities. Titled land acquisition, subdivision planning, and certified geodetic surveying in Lucena City and Quezon Province.
+                    </p>
+                    <p class="text-gold-400 font-serif italic text-xs font-bold">"Invest Today, Build Tomorrow."</p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gold-300 uppercase tracking-wider mb-3 text-xs">Navigation</h4>
+                    <ul class="space-y-2 font-medium">
+                        <li><a href="#home" class="hover:text-gold-300 transition">Home Page</a></li>
+                        <li><a href="#properties" class="hover:text-gold-300 transition">Titled Lot Directory</a></li>
+                        <li><a href="#estimator" class="hover:text-gold-300 transition">Price Estimator</a></li>
+                        <li><a href="#services" class="hover:text-gold-300 transition">Geodetic Services</a></li>
+                        <li><a href="#contact" class="hover:text-gold-300 transition">Contact Headquarters</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-gold-300 uppercase tracking-wider mb-3 text-xs">Contact Details</h4>
+                    <div class="space-y-1.5 text-slate-300 font-medium">
+                        <p><i class="fa-solid fa-phone text-gold-400 mr-1.5"></i> (042) 788 0306 / 0945 619 2329</p>
+                        <p><i class="fa-solid fa-envelope text-gold-400 mr-1.5"></i> rtolentinofiles07@gmail.com</p>
+                        <p><i class="fa-brands fa-facebook text-gold-400 mr-1.5"></i> Orosouth Realty Corporation</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-slate-400 text-[11px]">
+                <p>&copy; <span id="year"></span> Orosouth Realty Corporation. All rights reserved.</p>
+                <p>Unit 2-K LIC Building, 1080 Dona Aurora Blvd., Lucena City, Quezon 4301</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Scripts -->
+    <script>
+        window.currentDpPercent = 20;
+
+        window.transferToInquiryForm = function() {
+            const calcPropertySelect = document.getElementById('calc-property');
+            const calcAreaInput = document.getElementById('calc-area');
+            if (!calcPropertySelect || !calcAreaInput) return;
+
+            const selectedOption = calcPropertySelect.options[calcPropertySelect.selectedIndex];
+            const propertyName = selectedOption ? (selectedOption.getAttribute('data-name') || '') : '';
+            const area = calcAreaInput.value;
+
+            const formInterest = document.getElementById('form-interest');
+            const formLotSize = document.getElementById('form-lotsize');
+
+            if (formInterest) {
+                if (propertyName.includes('Samil')) formInterest.value = "Brgy. Samil, Lucban";
+                else if (propertyName.includes('Sto. Niño')) formInterest.value = "Brgy. Sto. Niño, San Francisco";
+                else if (propertyName.includes('Tiawe')) formInterest.value = "Brgy. Tiawe, Lucban";
+                else if (propertyName.includes('Nalunao')) formInterest.value = "Brgy. Nalunao, Lucban";
+            }
+
+            if (formLotSize) formLotSize.value = area;
+
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        window.selectLotForCalc = function(lotName, pricePerSqm) {
+            const calcPropertySelect = document.getElementById('calc-property');
+            if (!calcPropertySelect) return;
+
+            for (let i = 0; i < calcPropertySelect.options.length; i++) {
+                const option = calcPropertySelect.options[i];
+                if (option.getAttribute('data-name') === lotName) {
+                    calcPropertySelect.selectedIndex = i;
+                    break;
+                }
+            }
+            window.calculateCost();
+            const calcSection = document.getElementById('estimator');
+            if (calcSection) {
+                calcSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        window.setDownPayment = function(percent) {
+            window.currentDpPercent = percent;
+            const dpPercentDisplay = document.getElementById('dp-percent-display');
+            if (dpPercentDisplay) dpPercentDisplay.textContent = percent;
+
+            document.querySelectorAll('.dp-btn').forEach(btn => {
+                if (parseInt(btn.getAttribute('data-dp')) === percent) {
+                    btn.classList.add('bg-brand-800', 'border-gold-400');
+                    btn.classList.remove('bg-brand-990', 'border-brand-700');
+                } else {
+                    btn.classList.remove('bg-brand-800', 'border-gold-400');
+                    btn.classList.add('bg-brand-990', 'border-brand-700');
+                }
+            });
+
+            window.calculateCost();
+        };
+
+        window.handleFormSubmit = function(e) {
+            if (e && e.preventDefault) e.preventDefault();
+            const modal = document.getElementById('success-modal');
+            if (modal) modal.classList.remove('hidden');
+        };
+
+        window.closeModal = function() {
+            const modal = document.getElementById('success-modal');
+            if (modal) modal.classList.add('hidden');
+            const form = document.getElementById('info-sheet-form');
+            if (form) form.reset();
+        };
+
+        window.calculateCost = function() {
+            const calcPropertySelect = document.getElementById('calc-property');
+            const calcAreaInput = document.getElementById('calc-area');
+            const calcTermSelect = document.getElementById('calc-term');
+
+            const calcTotalPrice = document.getElementById('calc-total-price');
+            const calcSummaryText = document.getElementById('calc-summary-text');
+            const calcRate = document.getElementById('calc-rate');
+            const calcDpAmount = document.getElementById('calc-dp-amount');
+            const calcBalance = document.getElementById('calc-balance');
+            const calcMonthly = document.getElementById('calc-monthly');
+            const areaBadge = document.getElementById('area-val-badge');
+            const termMonthsDisplay = document.getElementById('term-months-display');
+
+            if (!calcPropertySelect || !calcAreaInput) return;
+
+            const pricePerSqm = parseFloat(calcPropertySelect.value) || 0;
+            const area = parseFloat(calcAreaInput.value) || 0;
+            const termMonths = parseInt(calcTermSelect ? calcTermSelect.value : 24) || 24;
+            const selectedOption = calcPropertySelect.options[calcPropertySelect.selectedIndex];
+            const propertyName = selectedOption ? (selectedOption.getAttribute('data-name') || '') : '';
+
+            const total = pricePerSqm * area;
+            const dp = total * (window.currentDpPercent / 100);
+            const balance = total - dp;
+            const monthly = termMonths > 0 ? (balance / termMonths) : 0;
+
+            if (areaBadge) areaBadge.textContent = `${area} SQM`;
+            if (termMonthsDisplay) termMonthsDisplay.textContent = termMonths;
+            if (calcTotalPrice) calcTotalPrice.textContent = '₱' + Math.round(total).toLocaleString();
+            if (calcRate) calcRate.textContent = '₱' + pricePerSqm.toLocaleString();
+            if (calcDpAmount) calcDpAmount.textContent = '₱' + Math.round(dp).toLocaleString();
+            if (calcBalance) calcBalance.textContent = '₱' + Math.round(balance).toLocaleString();
+            if (calcMonthly) calcMonthly.textContent = '₱' + Math.round(monthly).toLocaleString() + ' / mo';
+            if (calcSummaryText) calcSummaryText.textContent = `For ${area} SQ.M at ${propertyName}`;
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElem = document.getElementById('year');
+            if (yearElem) yearElem.textContent = new Date().getFullYear();
+
+            // Mobile menu toggle
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu) mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Filtering
+            const filterSearch = document.getElementById('filter-search');
+            const filterLocation = document.getElementById('filter-location');
+            const filterPrice = document.getElementById('filter-price');
+            const resetBtn = document.getElementById('reset-filters');
+            const lotCards = document.querySelectorAll('.lot-card');
+            const noResults = document.getElementById('no-results');
+
+            function applyFilters() {
+                if (!filterSearch || !filterLocation || !filterPrice) return;
+                const searchVal = filterSearch.value.toLowerCase().trim();
+                const locationVal = filterLocation.value;
+                const priceVal = filterPrice.value === 'all' ? Infinity : parseFloat(filterPrice.value);
+                
+                let matchCount = 0;
+
+                lotCards.forEach(card => {
+                    const name = (card.getAttribute('data-name') || '').toLowerCase();
+                    const location = card.getAttribute('data-location') || '';
+                    const price = parseFloat(card.getAttribute('data-price') || '0');
+
+                    const matchesSearch = name.includes(searchVal);
+                    const matchesLocation = locationVal === 'all' || location === locationVal;
+                    const matchesPrice = price <= priceVal;
+
+                    if (matchesSearch && matchesLocation && matchesPrice) {
+                        card.style.display = 'flex';
+                        matchCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (noResults) {
+                    if (matchCount === 0) noResults.classList.remove('hidden');
+                    else noResults.classList.add('hidden');
+                }
+            }
+
+            if (filterSearch) filterSearch.addEventListener('input', applyFilters);
+            if (filterLocation) filterLocation.addEventListener('change', applyFilters);
+            if (filterPrice) filterPrice.addEventListener('change', applyFilters);
+
+            if (resetBtn) {
+                resetBtn.addEventListener('click', () => {
+                    if (filterSearch) filterSearch.value = '';
+                    if (filterLocation) filterLocation.value = 'all';
+                    if (filterPrice) filterPrice.value = 'all';
+                    applyFilters();
+                });
+            }
+
+            // Calculation event listeners
+            const calcPropertySelect = document.getElementById('calc-property');
+            const calcAreaInput = document.getElementById('calc-area');
+            const calcTermSelect = document.getElementById('calc-term');
+
+            if (calcPropertySelect) calcPropertySelect.addEventListener('change', window.calculateCost);
+            if (calcAreaInput) calcAreaInput.addEventListener('input', window.calculateCost);
+            if (calcTermSelect) calcTermSelect.addEventListener('change', window.calculateCost);
+
+            // FAQ Accordion
+            const faqToggles = document.querySelectorAll('.faq-toggle');
+            faqToggles.forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    const content = toggle.nextElementSibling;
+                    const icon = toggle.querySelector('i');
+                    content.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            });
+
+            // Initial calculation
+            window.calculateCost();
+        });
+    </script>
+</body>
+</html>
