@@ -473,10 +473,10 @@
                         <div>
                             <label class="block text-xs font-bold text-gold-300 mb-2 uppercase tracking-wider">1. Select Target Property Location</label>
                             <select id="calc-property" class="w-full bg-brand-990 border border-gold-400/40 rounded-xl px-4 py-3 text-xs text-white font-bold focus:outline-none focus:border-gold-300 transition">
-                                <option value="10000" data-name="Brgy. Samil, Lucban, Quezon">Brgy. Samil, Lucban (₱10,000 / sq.m)</option>
-                                <option value="500" data-name="Brgy. Sto. Niño, San Francisco, Quezon">Brgy. Sto. Niño, San Francisco (₱500 / sq.m)</option>
-                                <option value="2000" data-name="Brgy. Tiawe, Lucban, Quezon">Brgy. Tiawe, Lucban (₱2,000 / sq.m)</option>
-                                <option value="2000" data-name="Brgy. Nalunao, Lucban, Quezon">Brgy. Nalunao, Lucban (₱2,000 / sq.m)</option>
+                               <option value="Samil" data-name="Brgy. Samil, Lucban, Quezon" data-cash="8000" data-installment="10000">Brgy. Samil, Lucban</option>
+                               <option value="StoNino" data-name="Brgy. Sto. Niño, San Francisco, Quezon" data-cash="500" data-installment="1000">Brgy. Sto. Niño, San Francisco</option>
+                               <option value="Tiawe" data-name="Brgy. Tiawe, Lucban, Quezon" data-cash="2000" data-installment="3500">Brgy. Tiawe, Lucban</option>
+                               <option value="Nalunao" data-name="Brgy. Nalunao, Lucban, Quezon" data-cash="2000" data-installment="3500">Brgy. Nalunao, Lucban</option>
                             </select>
                         </div>
 
@@ -493,17 +493,15 @@
                             <div class="grid grid-cols-3 gap-2">
                                 <button type="button" onclick="setDownPayment(20)" class="dp-btn bg-brand-800 border border-gold-400 text-xs py-2.5 rounded-lg text-white font-bold transition" data-dp="20">20% DP</button>
                                 <button type="button" onclick="setDownPayment(30)" class="dp-btn bg-brand-990 border border-brand-700 text-xs py-2.5 rounded-lg text-white font-medium transition" data-dp="30">30% DP</button>
-                                <button type="button" onclick="setDownPayment(50)" class="dp-btn bg-brand-990 border border-brand-700 text-xs py-2.5 rounded-lg text-white font-medium transition" data-dp="50">50% Spot</button>
+                                <button type="button" onclick="setDownPayment(0)" class="dp-btn bg-brand-990 border border-brand-700 text-xs py-2.5 rounded-lg text-white font-medium transition" data-dp="0">FULL CASH</button>
                             </div>
                         </div>
 
                         <div>
                             <label class="block text-xs font-bold text-gold-300 mb-2 uppercase tracking-wider">4. Remaining Balance Payment Term</label>
                             <select id="calc-term" class="w-full bg-brand-990 border border-gold-400/40 rounded-xl px-4 py-3 text-xs text-white font-bold focus:outline-none focus:border-gold-300 transition">
-                                <option value="12">12 Months (1 Year)</option>
                                 <option value="24" selected>24 Months (2 Years)</option>
                                 <option value="36">36 Months (3 Years)</option>
-                                <option value="48">48 Months (4 Years)</option>
                             </select>
                         </div>
 
@@ -528,7 +526,7 @@
                                     <span class="font-bold text-white" id="calc-rate">₱10,000</span>
                                 </div>
                                 <div class="flex justify-between text-slate-300">
-                                    <span>Down Payment (<span id="dp-percent-display">20</span>%):</span>
+                                    <span id="dp-label">Down Payment (<span id="dp-percent-display">20</span>%):</span>
                                     <span class="font-bold text-gold-300" id="calc-dp-amount">₱300,000</span>
                                 </div>
                                 <div class="flex justify-between text-slate-300">
@@ -1043,6 +1041,7 @@
             const calcSummaryText = document.getElementById('calc-summary-text');
             const calcRate = document.getElementById('calc-rate');
             const calcDpAmount = document.getElementById('calc-dp-amount');
+            const dpLabel = document.getElementById('dp-label');
             const calcBalance = document.getElementById('calc-balance');
             const calcMonthly = document.getElementById('calc-monthly');
             const areaBadge = document.getElementById('area-val-badge');
@@ -1050,21 +1049,23 @@
 
             if (!calcPropertySelect || !calcAreaInput) return;
 
-            const pricePerSqm = parseFloat(calcPropertySelect.value) || 0;
+            const selectedOption = calcPropertySelect.options[calcPropertySelect.selectedIndex];
+            const isFullCash = window.currentDpPercent === 0;
+            const pricePerSqm = parseFloat(isFullCash ? selectedOption.getAttribute('data-cash') : selectedOption.getAttribute('data-installment')) || 0;
             const area = parseFloat(calcAreaInput.value) || 0;
             const termMonths = parseInt(calcTermSelect ? calcTermSelect.value : 24) || 24;
-            const selectedOption = calcPropertySelect.options[calcPropertySelect.selectedIndex];
             const propertyName = selectedOption ? (selectedOption.getAttribute('data-name') || '') : '';
 
             const total = pricePerSqm * area;
-            const dp = total * (window.currentDpPercent / 100);
-            const balance = total - dp;
-            const monthly = termMonths > 0 ? (balance / termMonths) : 0;
+            const dp = isFullCash ? total : total * (window.currentDpPercent / 100);
+            const balance = isFullCash ? 0 : total - dp;
+            const monthly = isFullCash ? 0 : (termMonths > 0 ? balance / termMonths : 0);
 
             if (areaBadge) areaBadge.textContent = `${area} SQM`;
             if (termMonthsDisplay) termMonthsDisplay.textContent = termMonths;
             if (calcTotalPrice) calcTotalPrice.textContent = '₱' + Math.round(total).toLocaleString();
             if (calcRate) calcRate.textContent = '₱' + pricePerSqm.toLocaleString();
+            if (dpLabel) dpLabel.innerHTML = isFullCash ? 'Full Cash Payment:' : `Down Payment (<span id="dp-percent-display">${window.currentDpPercent}</span>%):`;
             if (calcDpAmount) calcDpAmount.textContent = '₱' + Math.round(dp).toLocaleString();
             if (calcBalance) calcBalance.textContent = '₱' + Math.round(balance).toLocaleString();
             if (calcMonthly) calcMonthly.textContent = '₱' + Math.round(monthly).toLocaleString() + ' / mo';
